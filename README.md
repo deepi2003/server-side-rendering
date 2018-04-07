@@ -1,0 +1,1 @@
+This project is tutorial for server side rendering
