@@ -1,11 +1,16 @@
+import 'babel-polyfill';
+
 import express from 'express';
 import renderer from './helpers/renderer';
+import createStore from './helpers/createStore';
+
 const app = express();
 
 app.use(express.static('public'));
 
-app.get('/', (req, res)=>{
-    res.send(renderer(req));
+app.get('*', (req, res)=>{
+
+    res.send(renderer(req, createStore()));
 
 });
 app.listen(3000, () =>{
