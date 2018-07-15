@@ -9,6 +9,10 @@
 # production
 /dist
 /public
+/build
+package-lock.json
+yarn.lock
+.cache
 
 # misc
 .DS_Store

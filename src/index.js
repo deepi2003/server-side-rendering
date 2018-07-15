@@ -1,13 +1,7 @@
-
-
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import Home from './client/components/Home';
-// const express = require('express');
-// const React = require('react');
-// const ReactDOMServer = require('react-dom/server');
-// const Home = require('./client/components/Home').default;
 
 const app = express();
 
@@ -19,7 +13,7 @@ app.get('/', (req, res)=>{
     <html>
     <head>
     <body>
-    <div>${content}</div>
+    <div id="root">${content}</div>
     <script src="bundle.js"></script>
 </body>
 </head>
