@@ -20,6 +20,9 @@ const renderer = (request, store) =>{
     <head>
     <body>
     <div id="root">${content}</div>
+    <script>
+    window.INITIAL_STATE=${JSON.stringify(store.getState())}
+</script>
     <script src="bundle.js"></script>
 </body>
 </head>

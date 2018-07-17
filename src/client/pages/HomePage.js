@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = ()=>{
+const HomePage = ()=>{
     return(
     <div> I am Home Component
             <button onClick = {()=>{ console.log('You pressed me'); } }>
@@ -8,4 +8,7 @@ const Home = ()=>{
             </button>
         </div>);
 };
-export  default Home;
+export  default {
+    component: HomePage
+};
+

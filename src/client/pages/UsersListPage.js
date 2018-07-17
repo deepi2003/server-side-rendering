@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 
 import {fetchUsers} from '../actions/index';
 
-class UsersList extends Component {
+class UsersListPage extends Component {
 
     componentWillMount() {
         // console.log(' Users list going to be mounted');
@@ -12,7 +12,7 @@ class UsersList extends Component {
 
     componentDidMount() {
         // console.log(' Users list is mounted');
-        this.props.fetchUsers();
+         this.props.fetchUsers();
     }
 
     renderUsers() {
@@ -45,8 +45,11 @@ function mapStateToProps(state) {
     }
 }
 
-export function loadData(store) {
+function loadData(store) {
     return store.dispatch(fetchUsers());
 }
 
-export default connect(mapStateToProps , mapDispatchToProps )(UsersList);
+export default {
+    component: connect(mapStateToProps , mapDispatchToProps )(UsersListPage),
+    loadData
+}
