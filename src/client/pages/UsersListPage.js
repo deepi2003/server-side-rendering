@@ -12,7 +12,6 @@ class UsersListPage extends Component {
 
     componentDidMount() {
         // console.log(' Users list is mounted');
-         this.props.fetchUsers();
     }
 
     renderUsers() {
